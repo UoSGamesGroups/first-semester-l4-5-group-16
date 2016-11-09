@@ -19,7 +19,7 @@ public class InputManager : MonoBehaviour {
         checkInput();
 	}
     
-    //TODO: refactor out later, maybe
+    //TODO: refactor out later with the coroutine, maybe
     void switchChar()
     {
         if (canSwap){

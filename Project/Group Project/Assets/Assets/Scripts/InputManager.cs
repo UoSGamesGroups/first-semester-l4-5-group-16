@@ -23,6 +23,7 @@ public class InputManager : MonoBehaviour {
     void switchChar()
     {
         if (canSwap){
+            players[currentPlayer].GetComponent<Movement>().move(0 , 0);
             if (currentPlayer + 1 < players.Length){
                 currentPlayer++;
             }

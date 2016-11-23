@@ -1,0 +1,37 @@
+23rd November 2016
+Meeting Minutes
+
+Attendies:
+Roberto
+Guy
+Charlie
+River
+Lewis
+John
+
+Topics Discussed:
+	Targets for the next three weeks
+		Current sprint to finish up the game with multiple levels
+		Next sprint to start test and fix issues found.
+		Last sprint fix any outstanding issues and polish the game.
+		
+Tasks Issued:
+	John:
+		Merge Unity Projects
+		Fix animation glitches
+		
+	Lewis
+		Fix GUI
+		
+	Roberto
+		Create Testing questionnaire
+		
+	Guy
+		Create Door artwork
+		Create Wall artwork
+	
+	Charlie
+		Assist River with level creation
+		
+	River
+		Create designed levels in Unity.

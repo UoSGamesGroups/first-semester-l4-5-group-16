@@ -60,20 +60,26 @@ public class InputManager : MonoBehaviour {
         //char movement
         int moveX = 0;
         int moveY = 0;
+        int animation = 0;
 
         if (Input.GetButton("k_moveLeft") && !Input.GetButton("k_moveRight")) {
             moveX = -1;
+            animation = 3;
         } else if (Input.GetButton("k_moveRight") && !Input.GetButton("k_moveLeft")) {
             moveX = 1;
+            animation = 1;
         }
 
         if (Input.GetButton("k_moveUp") && !Input.GetButton("k_moveDown")){
             moveY = 1;
+            animation = 4;
         }
         else if (Input.GetButton("k_moveDown") && !Input.GetButton("k_moveUp")){
             moveY = -1;
+            animation = 0;
         }
 
+        players[currentPlayer].GetComponent<Animator>().SetInteger("State", animation);
         players[currentPlayer].GetComponent<Movement>().move(moveX, moveY);
     }
 }

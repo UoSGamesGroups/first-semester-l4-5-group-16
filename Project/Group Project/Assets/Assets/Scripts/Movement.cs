@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        /*
         if (Input.GetKeyDown (KeyCode.D))
             
                 anim.SetInteger("State", 1);
@@ -36,6 +37,7 @@ public class Movement : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.W))
 
             anim.SetInteger("State", 0);
+        */
     }
 
 

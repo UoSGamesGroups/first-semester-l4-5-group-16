@@ -24,6 +24,8 @@ public class InputManager : MonoBehaviour {
     {
         if (canSwap){
             players[currentPlayer].GetComponent<Movement>().move(0 , 0);
+            players[currentPlayer].GetComponent<BoxCollider2D>().enabled = false;
+            players[currentPlayer].GetComponent<CircleCollider2D>().enabled = false;
             if (currentPlayer + 1 < players.Length){
                 currentPlayer++;
             }
@@ -32,7 +34,8 @@ public class InputManager : MonoBehaviour {
             }
 
             worldCamera.GetComponent<CameraController>().ChangeFocus(players[currentPlayer]);
-
+            players[currentPlayer].GetComponent<BoxCollider2D>().enabled = true;
+            players[currentPlayer].GetComponent<CircleCollider2D>().enabled = true;
             canSwap = false;
             StartCoroutine(swapTimer(2.0f));
         }
@@ -42,7 +45,6 @@ public class InputManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(waitTime);
         canSwap = true;
-        print("Swap Ready");
     }
 
     void checkInput()

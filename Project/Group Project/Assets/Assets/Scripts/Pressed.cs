@@ -14,14 +14,17 @@ public class Pressed : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter2D(Collider2D coll)
+    void OnTriggerStay2D()
     {
-        if (coll.gameObject.tag == "Player")
-            pressed = true;
+        pressed = true;
     }
+
+  //  void OnTriggerEnter2D(Collider2D coll)    {
+  //      pressed = true;
+ //   }
+
     void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player")
-            pressed = false;
+        pressed = false;
     }
 }

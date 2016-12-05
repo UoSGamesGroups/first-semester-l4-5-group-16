@@ -5,15 +5,9 @@ public class DoorOpen : MonoBehaviour {
 
 	public GameObject door;
 
-	private SpriteRenderer dSpriteRenderer;
-	private BoxCollider2D dBoxCollider;
     private Pressed pressed;
 
-	void Awake(){
-
-
-        dSpriteRenderer = door.GetComponent<SpriteRenderer>();
-        dBoxCollider = door.GetComponent<BoxCollider2D>();
+    void Awake(){
         pressed = this.gameObject.GetComponent<Pressed>();
 	}
 
@@ -21,12 +15,14 @@ public class DoorOpen : MonoBehaviour {
     {
         if (pressed.pressed)
         {
-            dSpriteRenderer.enabled = false;
-            dBoxCollider.enabled = false;
+            door.GetComponent<SpriteRenderer>().enabled = false;
+            door.GetComponent<BoxCollider2D>().enabled = false;
+           // door.GetComponent<AudioSource>().PlayOneShot(doorOpen);
         } else
         {
-            dSpriteRenderer.enabled = true;
-            dBoxCollider.enabled = true;
+            door.GetComponent<SpriteRenderer>().enabled = true;
+            door.GetComponent<BoxCollider2D>().enabled = true;
+         //   door.GetComponent<AudioSource>().PlayOneShot(doorClose);
         }
 
         

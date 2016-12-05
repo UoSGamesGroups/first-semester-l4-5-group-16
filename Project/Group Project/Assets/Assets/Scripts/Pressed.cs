@@ -4,8 +4,14 @@ using System.Collections;
 public class Pressed : MonoBehaviour {
 
     public bool pressed;
-	// Use this for initialization
-	void Start () {
+
+
+    public AudioClip doorOpen;
+    public AudioClip doorClose;
+    public GameObject door;
+
+    // Use this for initialization
+    void Start () {
         pressed = false;
 	}
 	
@@ -14,17 +20,23 @@ public class Pressed : MonoBehaviour {
 	
 	}
 
+
     void OnTriggerStay2D()
     {
+        if (!pressed)
+        {
+            door.GetComponent<AudioSource>().PlayOneShot(doorOpen);
+        }
         pressed = true;
     }
 
-  //  void OnTriggerEnter2D(Collider2D coll)    {
-  //      pressed = true;
- //   }
-
     void OnTriggerExit2D(Collider2D coll)
     {
+        if (pressed)
+        {
+            print("close");
+            door.GetComponent<AudioSource>().PlayOneShot(doorClose);
+        }
         pressed = false;
     }
 }

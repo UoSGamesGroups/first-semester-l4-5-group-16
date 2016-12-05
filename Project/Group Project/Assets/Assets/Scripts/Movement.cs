@@ -9,36 +9,6 @@ public class Movement : MonoBehaviour {
     {
         anim = GetComponent<Animator>();
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        /*
-        if (Input.GetKeyDown (KeyCode.D))
-            
-                anim.SetInteger("State", 1);
-
-        if (Input.GetKeyUp(KeyCode.D))
-
-            anim.SetInteger("State", 0);
-
-        if (Input.GetKeyDown(KeyCode.A))
-
-            anim.SetInteger("State", 3);
-
-        if (Input.GetKeyUp(KeyCode.A))
-
-            anim.SetInteger("State", 0);
-
-        if (Input.GetKeyDown(KeyCode.W))
-
-            anim.SetInteger("State", 4);
-
-        if (Input.GetKeyUp(KeyCode.W))
-
-            anim.SetInteger("State", 0);
-        */
-    }
 
 
     public void move(int x, int y)

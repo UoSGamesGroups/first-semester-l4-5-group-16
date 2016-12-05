@@ -33,7 +33,6 @@ public class InputManager : MonoBehaviour {
                 currentPlayer = 0;
             }
 
-            worldCamera.GetComponent<CameraController>().ChangeFocus(players[currentPlayer]);
             players[currentPlayer].GetComponent<BoxCollider2D>().enabled = true;
             players[currentPlayer].GetComponent<CircleCollider2D>().enabled = true;
             canSwap = false;

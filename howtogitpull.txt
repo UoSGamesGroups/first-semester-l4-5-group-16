@@ -1,0 +1,6 @@
+Download gitbash	https://git-for-windows.github.io/
+install and run 
+type "cd desktop"
+type "mkdir group16"
+type "git clone https://github.com/UoSGamesGroups/first-semester-l4-5-group-16.git"
+

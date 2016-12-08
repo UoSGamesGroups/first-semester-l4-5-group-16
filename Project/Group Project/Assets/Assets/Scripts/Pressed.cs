@@ -34,7 +34,6 @@ public class Pressed : MonoBehaviour {
     {
         if (pressed)
         {
-            print("close");
             door.GetComponent<AudioSource>().PlayOneShot(doorClose);
         }
         pressed = false;
